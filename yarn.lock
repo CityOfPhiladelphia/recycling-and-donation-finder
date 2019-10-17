@@ -826,15 +826,15 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@philly/pinboard@0.1.12":
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/@philly/pinboard/-/pinboard-0.1.12.tgz#385c5097096710179c43300553490ce0433321ca"
-  integrity sha512-AnCN6Sk7ZfvjTK2Qpkfhr7+NP54hAkR2T95vCRjeCkLWvZD1hpmdwSj9f+Ulnyi2D/vocq2X99QsGFTXXU4bBg==
+"@philly/pinboard@0.1.13":
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/@philly/pinboard/-/pinboard-0.1.13.tgz#404240c2fa9aab5704694438720a9e683a93dddf"
+  integrity sha512-qNSEIm6XqqTimfpAdvQG7jTBI8EaPEI+G3mptcQUrzILAoONlj16eW0Q/CvdcOzb/0fqbjhL8roLVbNqAFOPQw==
   dependencies:
     "@fortawesome/free-brands-svg-icons" "^5.8.2"
-    "@philly/vue-comps" "1.0.41"
+    "@philly/vue-comps" "1.0.42"
     "@philly/vue-datafetch" "0.0.27"
-    "@philly/vue-mapping" "1.0.41"
+    "@philly/vue-mapping" "1.0.43"
     axios "^0.19.0"
     core-js "^2.6.5"
     foundation-sites "^6.5.3"
@@ -842,10 +842,10 @@
     vue-router "^3.0.6"
     vuex "^3.1.1"
 
-"@philly/vue-comps@1.0.41":
-  version "1.0.41"
-  resolved "https://registry.yarnpkg.com/@philly/vue-comps/-/vue-comps-1.0.41.tgz#026d646546625da72b382391b53790f556848062"
-  integrity sha512-c4eogZS3lJSqMgbQ+7xcRcsAtUHwtjP9e5VsZj0x7XtbikvfQtR+nqt5BposKi+GUmYI2VRRYyUZBqkzhD08hw==
+"@philly/vue-comps@1.0.42":
+  version "1.0.42"
+  resolved "https://registry.yarnpkg.com/@philly/vue-comps/-/vue-comps-1.0.42.tgz#64afcaf675cf2cccc805a190862100f06ebff971"
+  integrity sha512-SUtD2VN+5wjXbnSp0TwY71VGHD9BSvs7PNHnQzrQoCIpTRsTz/Ke7yeQ4tYhxKRvbwuJIV903hMV/NTn5mNxsw==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.15"
     "@fortawesome/free-regular-svg-icons" "^5.7.2"
@@ -876,17 +876,17 @@
     vue "^2.6.10"
     vuex "^3.1.1"
 
-"@philly/vue-mapping@1.0.41":
-  version "1.0.41"
-  resolved "https://registry.yarnpkg.com/@philly/vue-mapping/-/vue-mapping-1.0.41.tgz#88cde4359b26fe4010c2dd1cb4372efa13824c01"
-  integrity sha512-BZtuOR+IaZJfqBqf5I2Fl3bOZ+uKZ7brV2nL3qRgQq7z7a/QJOnWaAQV8DHC/g8ExmnXbhMTZLN5T84nIkDu5Q==
+"@philly/vue-mapping@1.0.43":
+  version "1.0.43"
+  resolved "https://registry.yarnpkg.com/@philly/vue-mapping/-/vue-mapping-1.0.43.tgz#caad7bc3b002245d7caf7cfb7342e077661a2d5e"
+  integrity sha512-Snj7+wYrjUHOklwi45pNWX9CndS9xAtx2PwTlRh4Wn2i3EWrLI8dGH55861x4gt/JJke3h2ynxgaulfvLKA1lA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.15"
     "@fortawesome/free-regular-svg-icons" "^5.7.2"
     "@fortawesome/free-solid-svg-icons" "^5.7.2"
     "@fortawesome/vue-fontawesome" "^0.1.5"
     "@turf/turf" "^5.1.6"
-    L-esri-WebMap "https://github.com/CityOfPhiladelphia/L.esri.WebMap#00997e51a7ec5b65d43e54df07a00805797fce0c"
+    L-esri-WebMap "https://github.com/CityOfPhiladelphia/L.esri.WebMap#1d4ee074f60f2bba8bfe596d150ea23556c8a94f"
     Leaflet-PointInPolygon "https://github.com/CityOfPhiladelphia/Leaflet.PointInPolygon#a0d410f69aacf5f9165c4d01ccffeed824ccaed8"
     axios "^0.19.0"
     blueimp-md5 "^2.10.0"
@@ -2506,9 +2506,9 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"L-esri-WebMap@https://github.com/CityOfPhiladelphia/L.esri.WebMap#00997e51a7ec5b65d43e54df07a00805797fce0c":
+"L-esri-WebMap@https://github.com/CityOfPhiladelphia/L.esri.WebMap#1d4ee074f60f2bba8bfe596d150ea23556c8a94f":
   version "0.4.0"
-  resolved "https://github.com/CityOfPhiladelphia/L.esri.WebMap#00997e51a7ec5b65d43e54df07a00805797fce0c"
+  resolved "https://github.com/CityOfPhiladelphia/L.esri.WebMap#1d4ee074f60f2bba8bfe596d150ea23556c8a94f"
   dependencies:
     arcgis-to-geojson-utils "^1.0.1"
     date-fns "^1.30.1"
