@@ -36,8 +36,8 @@ pinboard({
     enabled: false,
   },
   app: {
-    title: 'Recycling and donation finder',
-    tagLine: 'Find resources for recycling and donations in the City',
+    title: 'Resources for recycling and donation',
+    tagLine: 'Find out where to donate items or recycle in Philadelphia',
     logoAlt: 'City of Philadelphia',
     type: 'recycling',
   },
