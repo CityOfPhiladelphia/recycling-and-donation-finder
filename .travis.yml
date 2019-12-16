@@ -11,7 +11,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: 'phila-resource-finder'
-    upload-dir: 'recycling-and-donation-finder'
+    upload-dir: 'recycling-donation-finder'
     on:
       branch: master
     local_dir: dist
