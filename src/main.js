@@ -6,7 +6,7 @@
 // if that is not needed, we can move this info to main.js
 
 // import pinboard
-import pinboard from '@philly/pinboard/src/main.js';
+import pinboard from '@phila/pinboard/src/main.js';
 
 // data-sources
 import recycling from './data-sources/recycling';

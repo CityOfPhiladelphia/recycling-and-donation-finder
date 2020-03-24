@@ -16,7 +16,7 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        data: `@import "@/scss/_variables.scss";
+        prependData: `@import "@/scss/_variables.scss";
               @import "@/scss/_mixins.scss";`,
       },
     },
@@ -34,9 +34,10 @@ module.exports = {
   assetsDir: 'static',
   transpileDependencies: [
     // can be string or regex
-    // '@philly/vue-comps',
-    // '@philly/vue-mapping',
-    // '@philly/vue-datafetch',
+    '@phila/pinboard',
+    '@phila/vue-comps',
+    '@phila/vue-mapping',
+    '@phila/vue-datafetch',
     // /other-dep/
   ],
 
