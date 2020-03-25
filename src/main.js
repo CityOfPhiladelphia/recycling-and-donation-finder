@@ -71,7 +71,7 @@ pinboard({
           </ul>\
         </div>\
       </div>\
-      '
+      ',
     },
     // 'Source-separated recycling': {
     //   'html': '\
