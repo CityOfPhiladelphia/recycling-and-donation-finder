@@ -73,27 +73,27 @@ pinboard({
       </div>\
       '
     },
-    'Source-separated recycling': {
-      'html': '\
-      <div class="full-div">We accept the following items cleaned and dry curbside:</div>\
-      <div class="grid-x">\
-        <div class="half-div">\
-          <ul>\
-            <li>Plastic bottles and containers (#1, 2, & 5)</li>\
-            <li>Metal Cans</li>\
-            <li>Glass</li>\
-          </ul>\
-        </div>\
-        <div class="half-div">\
-          <ul>\
-            <li>Paper</li>\
-            <li>Cardboard</li>\
-            <li>Cartons</li>\
-          </ul>\
-        </div>\
-      </div>\
-      '
-    }
+    // 'Source-separated recycling': {
+    //   'html': '\
+    //   <div class="full-div">We accept the following items cleaned and dry curbside:</div>\
+    //   <div class="grid-x">\
+    //     <div class="half-div">\
+    //       <ul>\
+    //         <li>Plastic bottles and containers (#1, 2, & 5)</li>\
+    //         <li>Metal Cans</li>\
+    //         <li>Glass</li>\
+    //       </ul>\
+    //     </div>\
+    //     <div class="half-div">\
+    //       <ul>\
+    //         <li>Paper</li>\
+    //         <li>Cardboard</li>\
+    //         <li>Cartons</li>\
+    //       </ul>\
+    //     </div>\
+    //   </div>\
+    //   '
+    // }
   },
   map: {
     defaultBasemap: 'pwd',
