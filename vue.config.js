@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/',
+  // publicPath: '/',
   chainWebpack: (config) => {
     config.resolve.symlinks(false);
   },
