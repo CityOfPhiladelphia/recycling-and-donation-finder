@@ -21,6 +21,13 @@ pinboard({
       return item.organization_name;
     },
   },
+  alerts: {
+    header: 'alertBanner',
+  },
+  dropdown: [
+    'keyword',
+    'address',
+  ],
   baseConfig: BASE_CONFIG_URL,
   cyclomedia: {
     enabled: false,
