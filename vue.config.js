@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/recycling-donation-finder',
+  publicPath: '/recycling/dev/',
   chainWebpack: (config) => {
     config.resolve.symlinks(false);
   },

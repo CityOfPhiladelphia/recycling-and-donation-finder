@@ -16,6 +16,7 @@ var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-d
 
 pinboard({
   // baseConfig: null,
+  markerType: 'circle-marker',
   locationSlots: {
     title: function(state, item) {
       return item.organization_name;
