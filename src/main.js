@@ -16,6 +16,7 @@ var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-d
 
 pinboard({
   // baseConfig: null,
+  useDefaultLayout: true,
   markerType: 'circle-marker',
   locationSlots: {
     title: function(state, item) {
@@ -25,10 +26,12 @@ pinboard({
   alerts: {
     header: 'alertBanner',
   },
-  dropdown: [
-    'keyword',
-    'address',
-  ],
+  comboSearch: {
+    dropdown: [
+      'keyword',
+      'address',
+    ],
+  },
   baseConfig: BASE_CONFIG_URL,
   cyclomedia: {
     enabled: false,
