@@ -18,7 +18,7 @@ pinboard({
   baseConfig: BASE_CONFIG_URL,
   app: {
     title: 'Resources for recycling and donation',
-    tagLine: 'Find out where to donate items or recycle in Philadelphia',
+    subtitle: 'Find out where to donate items or recycle in Philadelphia',
     logoAlt: 'City of Philadelphia',
     type: 'recycling',
   },
@@ -30,15 +30,18 @@ pinboard({
   },
   locationInfo: {
     siteName: 'organization_name',
+    // siteName: function(item) {
+    //   return item.attributes.organization_name;
+    // },
   },
-  // alerts: {
-  //   header: {
-  //     type: 'alertBanner',
-  //     enabled: function() {
-  //       return true;
-  //     },
-  //   },
-  // },
+  alerts: {
+    header: {
+      type: 'alertBanner',
+      enabled: function() {
+        return true;
+      },
+    },
+  },
   markerType: 'circle-marker',
   circleMarkers:{
     // color: '#FF9D14',
