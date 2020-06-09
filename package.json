@@ -1,5 +1,5 @@
 {
-  "name": "immigrant-resource-finder",
+  "name": "recycling-resource-finder",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lintFix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "@phila/pinboard": "0.3.3",
+    "@phila/pinboard": "https://github.com/CityOfPhiladelphia/pinboard#49ce78ec304ac844f53e4115e63de043c2f90760",
     "core-js": "^3.3.3",
     "vue": "^2.6.10"
   },
