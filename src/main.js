@@ -12,10 +12,15 @@ import greeting from './general/greeting';
 
 // data-sources
 import recycling from './data-sources/recycling';
-var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@6126861722cee9384694742363d1661e771493b9/config.js';
+// var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@6126861722cee9384694742363d1661e771493b9/config.js';
 
 pinboard({
-  baseConfig: BASE_CONFIG_URL,
+  // baseConfig: BASE_CONFIG_URL,
+  hiddenRefine: {
+    blank: function(item) {
+      return item.organization_name !== null;
+    },
+  },
   app: {
     title: 'Resources for recycling and donation',
     subtitle: 'Find out where to donate items or recycle in Philadelphia',
