@@ -21,6 +21,12 @@ pinboard({
       return item.organization_name !== null;
     },
   },
+  refine: {
+    type: 'categoryField_array',
+    value: function(item) {
+      return item.services_offered; 
+    },
+  },
   app: {
     title: 'Resources for recycling and donation',
     subtitle: 'Find out where to donate items or recycle in Philadelphia',
