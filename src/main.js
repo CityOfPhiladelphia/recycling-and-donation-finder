@@ -15,21 +15,42 @@ import recycling from './data-sources/recycling';
 var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@6126861722cee9384694742363d1661e771493b9/config.js';
 
 pinboard({
-  // baseConfig: null,
-  markerType: 'circle-marker',
-  locationSlots: {
-    title: function(state, item) {
-      return item.organization_name;
-    },
+  baseConfig: BASE_CONFIG_URL,
+  app: {
+    title: 'Resources for recycling and donation',
+    subtitle: 'Find out where to donate items or recycle in Philadelphia',
+    logoAlt: 'City of Philadelphia',
+    type: 'recycling',
+  },
+  comboSearch: {
+    dropdown: [
+      'keyword',
+      'address',
+    ],
+  },
+  locationInfo: {
+    siteName: 'organization_name',
+    // siteName: function(item) {
+    //   return item.attributes.organization_name;
+    // },
   },
   alerts: {
-    header: 'alertBanner',
+    header: {
+      type: 'alertBanner',
+      enabled: function() {
+        return true;
+      },
+    },
   },
-  dropdown: [
-    'keyword',
-    'address',
-  ],
-  baseConfig: BASE_CONFIG_URL,
+  markerType: 'circle-marker',
+  circleMarkers:{
+    // color: '#FF9D14',
+    weight: 0,
+    radius: 8,
+    mobileRadius: 12,
+    size: 16,
+    mobileSize: 20,
+  },
   cyclomedia: {
     enabled: false,
     measurementAllowed: false,
@@ -46,12 +67,6 @@ pinboard({
   router: {
     enabled: false,
   },
-  app: {
-    title: 'Resources for recycling and donation',
-    tagLine: 'Find out where to donate items or recycle in Philadelphia',
-    logoAlt: 'City of Philadelphia',
-    type: 'recycling',
-  },
   geocoder: {
     url(input) {
       const inputEncoded = encodeURIComponent(input);
@@ -61,6 +76,9 @@ pinboard({
       gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
       include_units: true,
     },
+  },
+  footer: {
+    'HowToUse': false,
   },
   infoCircles: {
     'Single-stream recycling': {
@@ -84,31 +102,18 @@ pinboard({
       </div>\
       ',
     },
-    // 'Source-separated recycling': {
-    //   'html': '\
-    //   <div class="full-div">We accept the following items cleaned and dry curbside:</div>\
-    //   <div class="grid-x">\
-    //     <div class="half-div">\
-    //       <ul>\
-    //         <li>Plastic bottles and containers (#1, 2, & 5)</li>\
-    //         <li>Metal Cans</li>\
-    //         <li>Glass</li>\
-    //       </ul>\
-    //     </div>\
-    //     <div class="half-div">\
-    //       <ul>\
-    //         <li>Paper</li>\
-    //         <li>Cardboard</li>\
-    //         <li>Cartons</li>\
-    //       </ul>\
-    //     </div>\
-    //   </div>\
-    //   '
-    // }
   },
   map: {
+    // type: 'leaflet',
+    type: 'mapbox',
+    // tiles: 'hosted',
+    containerClass: 'map-container',
     defaultBasemap: 'pwd',
     center: [ -75.163471, 39.953338 ],
+    minZoom: 11,
+    maxZoom: 25,
+    shouldInitialize: true,
+
     zoom: 12,
     geocodeZoom: 15,
     imagery: {
@@ -128,6 +133,80 @@ pinboard({
       cityBasemapLabels: {
         url: 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer',
         zIndex: '3',
+      },
+    },
+  },
+  // mbStyle: 'mapbox://styles/mapbox/streets-v11',
+  mbStyle: {
+    version: 8,
+    sources: {
+      pwd: {
+        tiles: [
+          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+    },
+    layers: [
+      {
+        id: 'pwd',
+        type: 'raster',
+        source: 'pwd',
+      },
+    ],
+  },
+  basemapSources: {
+    pwd: {
+      source: {
+        tiles: [
+          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
+          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'pwd',
+        type: 'raster',
+      },
+    },
+    imagery2019: {
+      source: {
+        tiles: [
+          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_2019_3in/MapServer/tile/{z}/{y}/{x}',
+          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'imagery2019',
+        type: 'raster',
+      },
+    },
+  },
+  basemapLabelSources:{
+    cityBasemapLabels: {
+      source: {
+        tiles: [ 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}' ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'cityBasemapLabels',
+        type: 'raster',
+      },
+    },
+    imageryBasemapLabels: {
+      source: {
+        tiles: [ 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_Labels/MapServer/tile/{z}/{y}/{x}' ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'imageryBasemapLabels',
+        type: 'raster',
       },
     },
   },
