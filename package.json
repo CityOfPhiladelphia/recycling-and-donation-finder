@@ -9,7 +9,7 @@
     "lintFix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "@phila/pinboard": "https://github.com/CityOfPhiladelphia/pinboard#1f5c28fee6077b67d85fbfb9408dc75d518ea134",
+    "@phila/pinboard": "https://github.com/CityOfPhiladelphia/pinboard#ed04215dd2974c34ea41ba659ee2ed8b5c5bb42b",
     "core-js": "^3.3.3",
     "vue": "^2.6.10"
   },
@@ -18,7 +18,7 @@
     "@vue/cli-plugin-eslint": "^4.1.1",
     "@vue/cli-service": "^4.1.1",
     "@vue/eslint-config-standard": "^5.0.1",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.0.1",
     "lint-staged": "^9.5.0",

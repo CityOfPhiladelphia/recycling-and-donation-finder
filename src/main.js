@@ -106,6 +106,7 @@ pinboard({
   map: {
     // type: 'leaflet',
     type: 'mapbox',
+    // tiles: 'hosted',
     containerClass: 'map-container',
     defaultBasemap: 'pwd',
     center: [ -75.163471, 39.953338 ],
@@ -135,6 +136,7 @@ pinboard({
       },
     },
   },
+  // mbStyle: 'mapbox://styles/mapbox/streets-v11',
   mbStyle: {
     version: 8,
     sources: {
