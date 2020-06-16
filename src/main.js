@@ -16,17 +16,6 @@ import recycling from './data-sources/recycling';
 
 pinboard({
   // baseConfig: BASE_CONFIG_URL,
-  hiddenRefine: {
-    blank: function(item) {
-      return item.organization_name !== null;
-    },
-  },
-  refine: {
-    type: 'categoryField_array',
-    value: function(item) {
-      return item.services_offered; 
-    },
-  },
   app: {
     title: 'Resources for recycling and donation',
     subtitle: 'Find out where to donate items or recycle in Philadelphia',
@@ -41,9 +30,17 @@ pinboard({
   },
   locationInfo: {
     siteName: 'organization_name',
-    // siteName: function(item) {
-    //   return item.attributes.organization_name;
-    // },
+  },
+  hiddenRefine: {
+    blank: function(item) {
+      return item.organization_name !== null;
+    },
+  },
+  refine: {
+    type: 'categoryField_array',
+    value: function(item) {
+      return item.services_offered;
+    },
   },
   alerts: {
     header: {
