@@ -22,6 +22,9 @@ pinboard({
     logoAlt: 'City of Philadelphia',
     type: 'recycling',
   },
+  gtag: {
+    category: 'rf-recycling',
+  },
   comboSearch: {
     dropdown: [
       'keyword',
