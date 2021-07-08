@@ -11,7 +11,7 @@ export default {
     </div>\
     <br>\
     <h3>Accepting donations or recyclables?</h3>\
-    <p>To learn about adding your organization to the finder, contact <a href="mailto: cleanphl@phila.gov">cleanphl@phila.gov</a>.</p>\
+    <p>To learn about adding your organization to the finder, contact <a href="mailto: RecyclingOffice@phila.gov">RecyclingOffice@phila.gov</a>.</p>\
     <br>\
     <h2>Our partners</h2>\
     <br>\

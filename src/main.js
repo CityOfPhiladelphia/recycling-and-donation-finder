@@ -52,12 +52,12 @@ pinboard({
     },
   },
   alerts: {
-    header: {
-      type: 'alertBanner',
-      enabled: function() {
-        return true;
-      },
-    },
+    // header: {
+    //   type: 'alertBanner',
+    //   enabled: function() {
+    //     return true;
+    //   },
+    // },
   },
   markerType: 'circle-marker',
   circleMarkers:{
