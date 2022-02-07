@@ -104,7 +104,7 @@ pinboard({
       return `//api.phila.gov/ais/v1/search/${inputEncoded}`;
     },
     params: {
-      gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
+      // gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
       include_units: true,
     },
   },
