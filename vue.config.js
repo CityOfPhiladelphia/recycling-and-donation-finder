@@ -1,6 +1,5 @@
 module.exports = {
-  publicPath: '/recycling-donation-finder',
-  // publicPath: '/recycling/dev/',
+  publicPath: process.env.VUE_APP_PUBLICPATH,
   chainWebpack: (config) => {
     config.resolve.symlinks(false);
   },
@@ -32,7 +31,7 @@ module.exports = {
   // //   },
   // // },
   // },
-  assetsDir: 'static',
+  // assetsDir: 'static',
   transpileDependencies: [
     // can be string or regex
     '@phila/pinboard',
