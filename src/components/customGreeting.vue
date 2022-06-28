@@ -4,7 +4,7 @@
   >
     <div class="section has-text-centered">
       <button
-        class="button open-list-button is-primary"
+        class="button open-list-button"
         @click="$emit('view-list')"
         v-html="$t('app.viewList')"
       />
@@ -133,6 +133,12 @@ export default {
 
   .open-list-button {
     text-transform: uppercase;
+    background-color: #0f4d90;
+    color: #ffffff;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 17px;
+    padding-bottom: 17px;
   }
 
 </style>

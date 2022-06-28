@@ -11,6 +11,15 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
 }
 
+// Font Awesome Icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTimes as farTimes } from '@fortawesome/pro-regular-svg-icons/faTimes';
+import { faPlus as farPlus } from '@fortawesome/pro-regular-svg-icons/faPlus';
+import { faMinus as farMinus } from '@fortawesome/pro-regular-svg-icons/faMinus';
+
+library.add(farTimes, farPlus, farMinus);
+
+
 // import pinboard
 import pinboard from '@phila/pinboard/src/main.js';
 
@@ -22,6 +31,7 @@ const customComps = {
   'customGreeting': customGreeting,
 };
 
+import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
 
 pinboard({
   app: {
@@ -38,17 +48,18 @@ pinboard({
     placeholder: 'Search by address or keyword',
   },
   searchBar: {
-    dropdown: [
-      'keyword',
-      'address',
-    ],
+    // dropdown: [
+    //   'keyword',
+    //   'address',
+    // ],
+    searchTypes: [ 'address' ],
     labelText:  {
       address: 'Search by address',
-      keyword: 'Search by keyword',
+      // keyword: 'Search by keyword',
     },
     placeholderText: {
       address: 'Search by address',
-      keyword: 'Search by keyword',
+      // keyword: 'Search by keyword',
     },
   },
   locationInfo: {
@@ -133,37 +144,38 @@ pinboard({
   ],
   infoCircles: {
     'Single-stream recycling': {
-      'html': '\
-      <div class="full-div">We accept the following items cleaned and dry curbside:</div>\
-      <div class="grid-x">\
-        <div class="half-div">\
-          <ul>\
-            <li>Plastic bottles and containers (#1, 2, & 5)</li>\
-            <li>Metal Cans</li>\
-            <li>Glass</li>\
-          </ul>\
-        </div>\
-        <div class="half-div">\
-          <ul>\
-            <li>Paper</li>\
-            <li>Cardboard</li>\
-            <li>Cartons</li>\
-          </ul>\
-        </div>\
-      </div>\
-      ',
+      tip: 'We accept the following items cleaned and dry curbside: plastic bottles \
+      and containers (#1, 2, & 5), metal cans, glass, paper, cardboard, cartons',
+      multiline: true,
     },
+    // 'Single-stream recycling': {
+    //   'html': '\
+    //   <div>wawa</div>\
+    //   ',
+    // <div class="full-div">We accept the following items cleaned and dry curbside:</div>\
+    // <div>\
+    //   <div class="half-div">\
+    //     <ul>\
+    //       <li>Plastic bottles and containers (#1, 2, & 5)</li>\
+    //       <li>Metal Cans</li>\
+    //       <li>Glass</li>\
+    //     </ul>\
+    //   </div>\
+    //   <div class="half-div">\
+    //     <ul>\
+    //       <li>Paper</li>\
+    //       <li>Cardboard</li>\
+    //       <li>Cartons</li>\
+    //     </ul>\
+    //   </div>\
+    // </div>\
+    // },
   },
   map: {
-    // type: 'leaflet',
     type: 'mapbox',
-    // tiles: 'hosted',
     containerClass: 'map-container',
     defaultBasemap: 'pwd',
     center: [ -75.163471, 39.953338 ],
-    // minZoom: 11,
-    // maxZoom: 25,
-    // shouldInitialize: true,
     zoom: 12,
     geocodeZoom: 15,
     imagery: {
