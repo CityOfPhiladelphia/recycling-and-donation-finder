@@ -13,11 +13,13 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
 
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { faAngleDown as farAngleDown } from '@fortawesome/pro-regular-svg-icons/faAngleDown';
+import { faAngleUp as farAngleUp } from '@fortawesome/pro-regular-svg-icons/faAngleUp';
 import { faTimes as farTimes } from '@fortawesome/pro-regular-svg-icons/faTimes';
 import { faPlus as farPlus } from '@fortawesome/pro-regular-svg-icons/faPlus';
 import { faMinus as farMinus } from '@fortawesome/pro-regular-svg-icons/faMinus';
 
-library.add(farTimes, farPlus, farMinus);
+library.add(farAngleDown, farAngleUp, farTimes, farPlus, farMinus);
 
 
 // import pinboard
