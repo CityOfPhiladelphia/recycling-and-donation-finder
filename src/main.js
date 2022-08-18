@@ -46,22 +46,13 @@ pinboard({
     category: 'rf-recycling',
   },
   resetDataOnGeocode: true,
-  addressInput: {
-    placeholder: 'Search by address or keyword',
-  },
   searchBar: {
-    // dropdown: [
-    //   'keyword',
-    //   'address',
-    // ],
-    searchTypes: [ 'address' ],
+    searchTypes: [
+      'address',
+      'keyword',
+    ],
     labelText:  {
-      address: 'Search by address',
-      // keyword: 'Search by keyword',
-    },
-    placeholderText: {
-      address: 'Search by address',
-      // keyword: 'Search by keyword',
+      all: 'Search by address or keyword',
     },
   },
   locationInfo: {
