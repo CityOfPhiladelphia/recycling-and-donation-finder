@@ -12,17 +12,31 @@ if (process.env.NODE_ENV === 'production') {
 console.log('main.js process.env.NODE_ENV:', process.env.NODE_ENV, 'process.env.VUE_APP_PUBLICPATH:', process.env.VUE_APP_PUBLICPATH);
 
 
+// Font Awesome Icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faAngleDown as farAngleDown } from '@fortawesome/pro-regular-svg-icons/faAngleDown';
+import { faAngleUp as farAngleUp } from '@fortawesome/pro-regular-svg-icons/faAngleUp';
+import { faTimes as farTimes } from '@fortawesome/pro-regular-svg-icons/faTimes';
+import { faPlus as farPlus } from '@fortawesome/pro-regular-svg-icons/faPlus';
+import { faMinus as farMinus } from '@fortawesome/pro-regular-svg-icons/faMinus';
+
+library.add(farAngleDown, farAngleUp, farTimes, farPlus, farMinus);
+
+
 // import pinboard
 import pinboard from '@phila/pinboard/src/main.js';
 
-import greeting from './general/greeting';
-
 // data-sources
 import recycling from './data-sources/recycling';
-// var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@6126861722cee9384694742363d1661e771493b9/config.js';
+
+import customGreeting from './components/customGreeting.vue';
+const customComps = {
+  'customGreeting': customGreeting,
+};
+
+import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
 
 pinboard({
-  // baseConfig: BASE_CONFIG_URL,
   app: {
     title: 'Resources for recycling and donation',
     subtitle: 'Find out where to donate items or recycle in Philadelphia',
@@ -32,15 +46,20 @@ pinboard({
   gtag: {
     category: 'rf-recycling',
   },
-  comboSearch: {
-    dropdown: [
-      'keyword',
+  resetDataOnGeocode: true,
+  searchBar: {
+    searchTypes: [
       'address',
+      'keyword',
     ],
+    labelText:  {
+      all: 'Search by address or keyword',
+    },
   },
   locationInfo: {
     siteName: 'organization_name',
   },
+  customComps,
   hiddenRefine: {
     blank: function(item) {
       return item.organization_name !== null;
@@ -71,14 +90,13 @@ pinboard({
   },
   cyclomedia: {
     enabled: false,
-    measurementAllowed: false,
-    popoutAble: true,
-    recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs',
-    username: process.env.VUE_APP_CYCLOMEDIA_USERNAME,
-    password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
-    apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
+    // measurementAllowed: false,
+    // popoutAble: true,
+    // recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs',
+    // username: process.env.VUE_APP_CYCLOMEDIA_USERNAME,
+    // password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
+    // apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
   },
-  greeting,
   dataSources: {
     recycling,
   },
@@ -91,47 +109,67 @@ pinboard({
       return `//api.phila.gov/ais/v1/search/${inputEncoded}`;
     },
     params: {
-      gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
+      // gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
       include_units: true,
     },
   },
-  footer: {
-    'HowToUse': false,
-  },
+  footer: [
+    {
+      type: "native",
+      href: "https://www.phila.gov/",
+      attrs: {
+        target: "_blank",
+      },
+      text: "City of Philadelphia",
+    },
+    {
+      type: "native",
+      href: "/recycling-donation-finder/",
+      text: "About",
+    },
+    {
+      type: "native",
+      href: "https://www.phila.gov/feedback/",
+      attrs: {
+        target: "_blank",
+      },
+      text: "Feedback",
+    },
+  ],
   infoCircles: {
     'Single-stream recycling': {
-      'html': '\
-      <div class="full-div">We accept the following items cleaned and dry curbside:</div>\
-      <div class="grid-x">\
-        <div class="half-div">\
-          <ul>\
-            <li>Plastic bottles and containers (#1, 2, & 5)</li>\
-            <li>Metal Cans</li>\
-            <li>Glass</li>\
-          </ul>\
-        </div>\
-        <div class="half-div">\
-          <ul>\
-            <li>Paper</li>\
-            <li>Cardboard</li>\
-            <li>Cartons</li>\
-          </ul>\
-        </div>\
-      </div>\
-      ',
+      tip: 'We accept the following items cleaned and dry curbside: plastic bottles \
+      and containers (#1, 2, & 5), metal cans, glass, paper, cardboard, cartons',
+      multiline: true,
     },
+    // 'Single-stream recycling': {
+    //   'html': '\
+    //   <div>wawa</div>\
+    //   ',
+    // <div class="full-div">We accept the following items cleaned and dry curbside:</div>\
+    // <div>\
+    //   <div class="half-div">\
+    //     <ul>\
+    //       <li>Plastic bottles and containers (#1, 2, & 5)</li>\
+    //       <li>Metal Cans</li>\
+    //       <li>Glass</li>\
+    //     </ul>\
+    //   </div>\
+    //   <div class="half-div">\
+    //     <ul>\
+    //       <li>Paper</li>\
+    //       <li>Cardboard</li>\
+    //       <li>Cartons</li>\
+    //     </ul>\
+    //   </div>\
+    // </div>\
+    // },
   },
   map: {
-    // type: 'leaflet',
     type: 'mapbox',
-    // tiles: 'hosted',
     containerClass: 'map-container',
     defaultBasemap: 'pwd',
     center: [ -75.163471, 39.953338 ],
-    minZoom: 11,
-    maxZoom: 25,
-    shouldInitialize: true,
-
     zoom: 12,
     geocodeZoom: 15,
     imagery: {
