@@ -19,7 +19,6 @@ module.exports = {
       },
     },
   },
-
   transpileDependencies: [
     // can be string or regex
     '@phila/pinboard',

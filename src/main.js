@@ -6,10 +6,11 @@
 // if that is not needed, we can move this info to main.js
 
 // turn off console logging in production
-const { hostname='' } = location;
-if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
+if (process.env.NODE_ENV === 'production') {
   console.log = console.info = console.debug = console.error = function () {};
 }
+console.log('main.js process.env.NODE_ENV:', process.env.NODE_ENV, 'process.env.VUE_APP_PUBLICPATH:', process.env.VUE_APP_PUBLICPATH);
+
 
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
