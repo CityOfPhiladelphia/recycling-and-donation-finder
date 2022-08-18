@@ -124,7 +124,7 @@ pinboard({
     },
     {
       type: "native",
-      href: "/oia/resource-finder",
+      href: "/recycling-donation-finder/",
       text: "About",
     },
     {
