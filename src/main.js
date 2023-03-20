@@ -46,7 +46,11 @@ pinboard({
   gtag: {
     category: 'rf-recycling',
   },
+  allowPrint: true,
+  showBuffers: true,
   resetDataOnGeocode: true,
+  retractableRefine: false,
+  dropdownRefine: false,
   searchBar: {
     searchTypes: [
       'address',
