@@ -85,8 +85,9 @@ pinboard({
   },
   markerType: 'circle-marker',
   circleMarkers:{
-    // color: '#FF9D14',
-    weight: 0,
+    // color: '#2176d2',
+    borderColor: 'white',
+    weight: 1,
     radius: 8,
     mobileRadius: 12,
     size: 16,
