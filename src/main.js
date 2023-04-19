@@ -37,6 +37,7 @@ const customComps = {
 import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
 
 pinboard({
+  publicPath: process.env.VUE_APP_PUBLICPATH,
   app: {
     title: 'Resources for recycling and donation',
     subtitle: 'Find out where to donate items or recycle in Philadelphia',
