@@ -121,7 +121,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import "../../node_modules/@phila/pinboard/src/assets/scss/customGreeting.scss";
 
   .section {
     padding: 1.5rem;
@@ -131,14 +133,14 @@ export default {
     margin-bottom: 2rem;
   }
 
-  .open-list-button {
-    text-transform: uppercase;
-    background-color: #0f4d90;
-    color: #ffffff;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 17px;
-    padding-bottom: 17px;
-  }
+  // .open-list-button {
+  //   text-transform: uppercase;
+  //   background-color: #0f4d90;
+  //   color: #ffffff;
+  //   padding-left: 32px;
+  //   padding-right: 32px;
+  //   padding-top: 17px;
+  //   padding-bottom: 17px;
+  // }
 
 </style>

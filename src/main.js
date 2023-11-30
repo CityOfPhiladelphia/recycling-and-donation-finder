@@ -37,6 +37,7 @@ const customComps = {
 import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
 
 pinboard({
+  publicPath: process.env.VUE_APP_PUBLICPATH,
   app: {
     title: 'Resources for recycling and donation',
     subtitle: 'Find out where to donate items or recycle in Philadelphia',
@@ -46,7 +47,11 @@ pinboard({
   gtag: {
     category: 'rf-recycling',
   },
+  allowPrint: true,
+  showBuffers: true,
   resetDataOnGeocode: true,
+  retractableRefine: false,
+  dropdownRefine: false,
   searchBar: {
     searchTypes: [
       'address',
@@ -81,8 +86,9 @@ pinboard({
   },
   markerType: 'circle-marker',
   circleMarkers:{
-    // color: '#FF9D14',
-    weight: 0,
+    // color: '#2176d2',
+    borderColor: 'white',
+    weight: 1,
     radius: 8,
     mobileRadius: 12,
     size: 16,
