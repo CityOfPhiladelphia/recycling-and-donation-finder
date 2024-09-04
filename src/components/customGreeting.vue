@@ -27,30 +27,6 @@
       </h2>
       <p>To learn about adding your organization to the finder, contact <a href="mailto:RecyclingOffice@phila.gov">RecyclingOffice@phila.gov</a>.</p>
     </div>
-
-    <div class="section">
-      <h1 class="title is-2">
-        Our partners
-      </h1>
-      <h2 class="title is-3">
-        Green Philly
-      </h2>
-      <p>
-        Founded in 2008, Green Philly connects Philadelphians to sustainable solutions through their website, events, and podcast. <a
-          href="https://www.thegreencities.com/about/"
-          target="_blank"
-        >Learn more about Green Philly.</a>
-      </p>
-      <h2 class="title is-3">
-        The Resource Exchange
-      </h2>
-      <p>
-        The Resource Exchange diverts valuable materials from the waste stream and redirects them to artists, builders, educators, and the public through their nonprofit reuse center. <a
-          href="https://theresourceexchange.org/about/"
-          target="_blank"
-        >Learn more about The Resource Exchange</a>.
-      </p>
-    </div>
   </div>
 </template>
 
