@@ -6,7 +6,7 @@ export default {
   url: 'https://phl.carto.com:443/api/v2/sql',
   options: {
     params: {
-      q: 'select * from recycling_and_donations where hide_on_finder is null or hide_on_finder::text in (\'FALSE\', \'false\')',
+      q: "SELECT * FROM phl.recycling_and_donations where hide_on_finder is null or hide_on_finder::text in ('TRUE', 'true', 'True', 'T')",
     },
   },
 };
