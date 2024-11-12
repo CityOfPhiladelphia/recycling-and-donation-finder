@@ -5,12 +5,10 @@
 // (we might not need to use axios with new vue async tools)
 // if that is not needed, we can move this info to main.js
 
-// turn off console logging in production
-if (process.env.NODE_ENV === 'production') {
-  console.log = console.info = console.debug = console.error = function () {};
+import isMac from './util/is-mac';
+if (isMac()) {
+  import('./assets/mac-style.scss')
 }
-console.log('main.js process.env.NODE_ENV:', process.env.NODE_ENV, 'process.env.VUE_APP_PUBLICPATH:', process.env.VUE_APP_PUBLICPATH);
-
 
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -22,22 +20,30 @@ import { faMinus as farMinus } from '@fortawesome/pro-regular-svg-icons/faMinus'
 
 library.add(farAngleDown, farAngleUp, farTimes, farPlus, farMinus);
 
+import { markRaw } from 'vue';
 
-// import pinboard
-import pinboard from '@phila/pinboard/src/main.js';
+// import pinboard from '@phila/pinboard';
+import pinboard from '../node_modules/@phila/pinboard/src/main.js';
+
+import '../node_modules/@phila/pinboard/dist/style.css';
 
 // data-sources
 import recycling from './data-sources/recycling';
 
 import customGreeting from './components/customGreeting.vue';
-const customComps = {
+const customComps = markRaw({
   'customGreeting': customGreeting,
-};
+});
 
-import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
+// import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
 
-pinboard({
-  publicPath: process.env.VUE_APP_PUBLICPATH,
+let $config = {
+  publicPath: import.meta.env.VITE_PUBLICPATH,
+  i18n: {
+    enabled: false,
+    selectorHidden: true,
+    data: {},
+  },
   app: {
     title: 'Resources for recycling and donation',
     subtitle: 'Find out where to donate items or recycle in Philadelphia',
@@ -62,7 +68,8 @@ pinboard({
     },
   },
   locationInfo: {
-    siteName: 'organization_name',
+    siteNameField: 'organization_name',
+    siteName: function(item) { return item.properties.organization_name },
   },
   customComps,
   hiddenRefine: {
@@ -73,7 +80,9 @@ pinboard({
   refine: {
     type: 'categoryField_array',
     value: function(item) {
-      return item.services_offered;
+      if (item && item.properties) {
+        return item.properties.services_offered;
+      }
     },
   },
   alerts: {
@@ -85,14 +94,24 @@ pinboard({
     // },
   },
   markerType: 'circle-marker',
-  circleMarkers:{
-    // color: '#2176d2',
-    borderColor: 'white',
-    weight: 1,
-    radius: 8,
-    mobileRadius: 12,
-    size: 16,
-    mobileSize: 20,
+  // circleMarkers: {
+  //   borderColor: 'white',
+  //   weight: 1,
+  //   radius: 8,
+  //   mobileRadius: 12,
+  //   size: 16,
+  //   mobileSize: 20,
+  // },
+  mapLayer: {
+    id: 'resources',
+    source: 'resources',
+    type: 'circle',
+    paint: {
+      'circle-radius': 7,
+      'circle-color': '#9400c6',
+      'circle-stroke-width': 1,
+      'circle-stroke-color': 'white',
+    },
   },
   cyclomedia: {
     enabled: false,
@@ -105,19 +124,6 @@ pinboard({
   },
   dataSources: {
     recycling,
-  },
-  router: {
-    enabled: false,
-  },
-  geocoder: {
-    url(input) {
-      const inputEncoded = encodeURIComponent(input);
-      return `//api.phila.gov/ais/v1/search/${inputEncoded}`;
-    },
-    params: {
-      // gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
-      include_units: true,
-    },
   },
   footer: [
     {
@@ -171,105 +177,7 @@ pinboard({
     // </div>\
     // },
   },
-  map: {
-    type: 'mapbox',
-    containerClass: 'map-container',
-    defaultBasemap: 'pwd',
-    center: [ -75.163471, 39.953338 ],
-    zoom: 12,
-    geocodeZoom: 15,
-    imagery: {
-      enabled: false,
-    },
-    basemaps: {
-      pwd: {
-        url: 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer',
-        tiledLayers: [
-          'cityBasemapLabels',
-        ],
-        type: 'featuremap',
-        attribution: 'Parcels: Philadelphia Water',
-      },
-    },
-    tiledLayers: {
-      cityBasemapLabels: {
-        url: 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer',
-        zIndex: '3',
-      },
-    },
-  },
-  // mbStyle: 'mapbox://styles/mapbox/streets-v11',
-  mbStyle: {
-    version: 8,
-    sources: {
-      pwd: {
-        tiles: [
-          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
-        ],
-        type: 'raster',
-        tileSize: 256,
-      },
-    },
-    layers: [
-      {
-        id: 'pwd',
-        type: 'raster',
-        source: 'pwd',
-      },
-    ],
-  },
-  basemapSources: {
-    pwd: {
-      source: {
-        tiles: [
-          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
-          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
-        ],
-        type: 'raster',
-        tileSize: 256,
-      },
-      layer: {
-        id: 'pwd',
-        type: 'raster',
-      },
-    },
-    imagery2019: {
-      source: {
-        tiles: [
-          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_2019_3in/MapServer/tile/{z}/{y}/{x}',
-          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
-        ],
-        type: 'raster',
-        tileSize: 256,
-      },
-      layer: {
-        id: 'imagery2019',
-        type: 'raster',
-      },
-    },
-  },
-  basemapLabelSources:{
-    cityBasemapLabels: {
-      source: {
-        tiles: [ 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}' ],
-        type: 'raster',
-        tileSize: 256,
-      },
-      layer: {
-        id: 'cityBasemapLabels',
-        type: 'raster',
-      },
-    },
-    imageryBasemapLabels: {
-      source: {
-        tiles: [ 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_Labels/MapServer/tile/{z}/{y}/{x}' ],
-        type: 'raster',
-        tileSize: 256,
-      },
-      layer: {
-        id: 'imageryBasemapLabels',
-        type: 'raster',
-      },
-    },
-  },
-});
+};
+
+pinboard($config);
+export default $config;
