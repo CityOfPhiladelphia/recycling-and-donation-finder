@@ -20,11 +20,8 @@ import { faMinus as farMinus } from '@fortawesome/pro-regular-svg-icons/faMinus'
 
 library.add(farAngleDown, farAngleUp, farTimes, farPlus, farMinus);
 
-import { markRaw } from 'vue';
-
-// import pinboard from '@phila/pinboard';
-import pinboard from '../node_modules/@phila/pinboard/src/main.js';
-
+import pinboard from '@phila/pinboard';
+// import pinboard from '../node_modules/@phila/pinboard/src/main.js';
 import '../node_modules/@phila/pinboard/dist/style.css';
 
 // data-sources
@@ -34,8 +31,6 @@ import customGreeting from './components/customGreeting.vue';
 const customComps = markRaw({
   'customGreeting': customGreeting,
 });
-
-// import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
 
 let $config = {
   publicPath: import.meta.env.VITE_PUBLICPATH,
@@ -94,14 +89,6 @@ let $config = {
     // },
   },
   markerType: 'circle-marker',
-  // circleMarkers: {
-  //   borderColor: 'white',
-  //   weight: 1,
-  //   radius: 8,
-  //   mobileRadius: 12,
-  //   size: 16,
-  //   mobileSize: 20,
-  // },
   mapLayer: {
     id: 'resources',
     source: 'resources',
@@ -124,6 +111,13 @@ let $config = {
   },
   dataSources: {
     recycling,
+  },
+  infoCircles: {
+    'Single-stream recycling': {
+      tip: 'We accept the following items cleaned and dry curbside: plastic bottles \
+      and containers (#1, 2, & 5), metal cans, glass, paper, cardboard, cartons',
+      multiline: true,
+    },
   },
   footer: [
     {
@@ -148,35 +142,6 @@ let $config = {
       text: "Feedback",
     },
   ],
-  infoCircles: {
-    'Single-stream recycling': {
-      tip: 'We accept the following items cleaned and dry curbside: plastic bottles \
-      and containers (#1, 2, & 5), metal cans, glass, paper, cardboard, cartons',
-      multiline: true,
-    },
-    // 'Single-stream recycling': {
-    //   'html': '\
-    //   <div>wawa</div>\
-    //   ',
-    // <div class="full-div">We accept the following items cleaned and dry curbside:</div>\
-    // <div>\
-    //   <div class="half-div">\
-    //     <ul>\
-    //       <li>Plastic bottles and containers (#1, 2, & 5)</li>\
-    //       <li>Metal Cans</li>\
-    //       <li>Glass</li>\
-    //     </ul>\
-    //   </div>\
-    //   <div class="half-div">\
-    //     <ul>\
-    //       <li>Paper</li>\
-    //       <li>Cardboard</li>\
-    //       <li>Cartons</li>\
-    //     </ul>\
-    //   </div>\
-    // </div>\
-    // },
-  },
 };
 
 pinboard($config);
