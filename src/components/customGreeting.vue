@@ -10,22 +10,69 @@
       />
     </div>
 
-    <div class="section">
-      <h1 class="title is-2 is-spaced">
+    <div class="section pt-0">
+      <h3 class="title is-3 is-spaced">
         About this finder
-      </h1>
-      <p>This tool can help you find find places to donate or recycle items in Philadelphia. You can:</p>
+      </h3>
+      <p>
+        Philadelphia households get weekly trash and
+        <a
+          target="_blank"
+          href="https://www.phila.gov/programs/recycling-program/what-to-recycle/"
+        >single-stream recycling</a>
+        collection. However, you may generate other materials that can be reused or recycled instead of going to a landfill.
+        Recycling helps our communities stay clean and green by diverting waste away from landfills and waste-to-energy facilities.
+      </p>
+      <p>This tool can help you recycle more and recycle right in Philadelphia. You can</p>
       <div class="app-list">
         <ul>
-          <li>Browse the list of drop-off locations.</li>
+          <li>Browse the list of drop-off locations where you can donate or recycle household items.</li>
           <li>Search by address or keyword.</li>
           <li>Filter your results by type of donation or material.</li>
         </ul>
       </div>
-      <h2 class="title is-3">
+      <p>
+        You can also find location and contact information for the City’s Sanitation Convenience Centers. You can go to a Sanitation Convenience Center to:
+      </p>
+      <div class="app-list">
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.phila.gov/services/trash-recycling-city-upkeep/find-a-sanitation-convenience-center-to-drop-off-trash-or-recycling"
+            >Drop off trash or recycling</a>.
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.phila.gov/services/trash-recycling-city-upkeep/get-a-recycling-bin/"
+            >Get a recycling bin</a>.
+          </li>
+        </ul>
+      </div>
+      <p>
+        If you have any questions, contact the Recycling Office:
+      </p>
+      <div class="app-list">
+        <ul>
+          <li>
+            By phone: <a
+              target="_blank"
+              href="tel:2156865444"
+            >(215) 686-5444</a>.
+          </li>
+          <li>
+            Be email: <a
+              target="_blank"
+              href="mailto:recyclingoffice@phila.gov"
+            >recyclingoffice@phila.gov</a>.
+          </li>
+        </ul>
+      </div>
+      <h3 class="title is-3">
         Accepting donations or recyclables?
-      </h2>
-      <p>To learn about adding your organization to the finder, contact <a href="mailto:RecyclingOffice@phila.gov">RecyclingOffice@phila.gov</a>.</p>
+      </h3>
+      <p>To learn about adding your organization to the finder, contact <a href="mailto:RecyclingOffice@phila.gov">recyclingoffice@phila.gov</a>.</p>
     </div>
   </div>
 </template>

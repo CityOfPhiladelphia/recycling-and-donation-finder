@@ -61,6 +61,9 @@ pinboard({
       all: 'Search by address or keyword',
     },
   },
+  i18n: {
+    enabled: false,
+  },
   locationInfo: {
     siteName: 'organization_name',
   },
