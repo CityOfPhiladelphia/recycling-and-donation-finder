@@ -1,61 +1,15 @@
 <script setup>
 
-// import $config from '../main.js';
-
-// const props = defineProps({
-//   'message': {
-//     type: String,
-//     default: function() {
-//       return 'defaultMessage';
-//     },
-//   },
-// });
+const props = defineProps({
+  database: {
+    type: Array,
+  },
+  isMobile: {
+    type: Boolean,
+    default: false,
+  },
+});
   
-// const sections = ref({});
-// const subsections = ref({});
-
-// computed
-// const i18nEnabled = computed(() => {
-//   if ($config.i18n) {
-//     return true;
-//   }
-//   return false;
-// });
-
-// const calloutOptions = computed(() => {
-//   return {};
-// });
-
-// const calloutSlots = computed(() => {
-//   return {
-//     text: 'test',
-//   };
-// });
-
-// const hasError = computed(() => {
-//   return this.$store.state.geocode.status === 'error';
-// });
-
-// const errorMessage = computed(() => {
-//   const input = this.$store.state.geocode.input;
-//   return `
-//       <p>
-//         We couldn't find
-//         ${input ? '<strong>' + input + '</strong>' : 'that address'}.
-//         Are you sure everything was spelled correctly?
-//       </p>
-//       <p>
-//         Here are some examples of things you can search for:
-//       </p>
-//       <ul>
-//         <li>1234 Market St</li>
-//         <li>1001 Pine Street #201</li>
-//         <li>12th & Market</li>
-//         <li>883309050 (an OPA number with no hyphens or other characters)</li>
-//       </ul>
-//     `;
-// });
-
 </script>
 
 <template>
@@ -68,6 +22,12 @@
           class="button greeting-button"
           @click="$emit('view-list')"
           v-html="$t('app.viewList')"
+        />
+        <button
+          v-if="isMobile"
+          class="button greeting-button"
+          @click="$emit('view-map')"
+          v-html="$t('app.viewMap')"
         />
       </div>
     </div>
@@ -120,10 +80,11 @@
   font-size: 1rem;
   color: white;
   cursor: pointer;
+  margin: 1rem;
 }
 
 .greeting-button:hover {
-  border-color: #2176d2 !important;
+  background-color: #444444 !important;
 }
 
 .half-data-section {

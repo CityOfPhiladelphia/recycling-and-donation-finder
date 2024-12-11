@@ -20,9 +20,9 @@ import { faMinus as farMinus } from '@fortawesome/pro-regular-svg-icons/faMinus'
 
 library.add(farAngleDown, farAngleUp, farTimes, farPlus, farMinus);
 
-import pinboard from '@phila/pinboard';
-// import pinboard from '../node_modules/@phila/pinboard/src/main.js';
-import '../node_modules/@phila/pinboard/dist/style.css';
+// import pinboard from '@phila/pinboard';
+import pinboard from '../node_modules/@phila/pinboard/src/main.js';
+// import '../node_modules/@phila/pinboard/dist/style.css';
 
 // data-sources
 import recycling from './data-sources/recycling';
