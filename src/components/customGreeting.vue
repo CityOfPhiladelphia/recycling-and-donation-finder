@@ -1,20 +1,40 @@
+<script setup>
+
+const props = defineProps({
+  database: {
+    type: Array,
+  },
+  isMobile: {
+    type: Boolean,
+    default: false,
+  },
+});
+  
+</script>
+
 <template>
   <div
-    class="content"
+    class="main-greeting"
   >
-    <div class="section has-text-centered">
+    <div class="has-text-centered container">
       <button
-        class="button open-list-button"
+        class="button greeting-button"
         @click="$emit('view-list')"
         v-html="$t('app.viewList')"
       />
+      <button
+        v-if="isMobile"
+        class="button greeting-button"
+        @click="$emit('view-map')"
+        v-html="$t('app.viewMap')"
+      />
     </div>
 
-    <div class="section pt-0">
+    <div class="main-area">
       <h3 class="title is-3 is-spaced">
         About this finder
       </h3>
-      <p>
+      <div class="mb-4">
         Philadelphia households get weekly trash and
         <a
           target="_blank"
@@ -22,19 +42,19 @@
         >single-stream recycling</a>
         collection. However, you may generate other materials that can be reused or recycled instead of going to a landfill.
         Recycling helps our communities stay clean and green by diverting waste away from landfills and waste-to-energy facilities.
-      </p>
-      <p>This tool can help you recycle more and recycle right in Philadelphia. You can</p>
-      <div class="app-list">
+      </div>
+      <div>This tool can help you recycle more and recycle right in Philadelphia. You can</div>
+      <div class="intro-list">
         <ul>
           <li>Browse the list of drop-off locations where you can donate or recycle household items.</li>
           <li>Search by address or keyword.</li>
           <li>Filter your results by type of donation or material.</li>
         </ul>
       </div>
-      <p>
+      <div>
         You can also find location and contact information for the City’s Sanitation Convenience Centers. You can go to a Sanitation Convenience Center to:
-      </p>
-      <div class="app-list">
+      </div>
+      <div class="intro-list">
         <ul>
           <li>
             <a
@@ -53,7 +73,7 @@
       <p>
         If you have any questions, contact the Recycling Office:
       </p>
-      <div class="app-list">
+      <div class="intro-list">
         <ul>
           <li>
             By phone: <a
@@ -76,94 +96,3 @@
     </div>
   </div>
 </template>
-
-<script>
-
-export default {
-  name: 'CustomGreeting',
-  props: {
-    'message': {
-      type: String,
-      default: function() {
-        return 'defaultMessage';
-      },
-    },
-  },
-  data() {
-    let data = {
-      sections: {},
-      subsections: {},
-    };
-    return data;
-  },
-  computed: {
-    i18nEnabled() {
-      if (this.$config.i18n) {
-        return true;
-      }
-      return false;
-
-    },
-    calloutOptions() {
-      return {};
-    },
-    calloutSlots() {
-      return {
-        text: 'test',
-      };
-    },
-    database() {
-      if (this.$store.state.sources[this.$appType].data) {
-        return this.$store.state.sources[this.$appType].data.rows || this.$store.state.sources[this.$appType].data.features || this.$store.state.sources[this.$appType].data;
-      }
-      return [];
-    },
-    hasError() {
-      return this.$store.state.geocode.status === 'error';
-    },
-    errorMessage() {
-      const input = this.$store.state.geocode.input;
-      return `
-          <p>
-            We couldn't find
-            ${input ? '<strong>' + input + '</strong>' : 'that address'}.
-            Are you sure everything was spelled correctly?
-          </p>
-          <p>
-            Here are some examples of things you can search for:
-          </p>
-          <ul>
-            <li>1234 Market St</li>
-            <li>1001 Pine Street #201</li>
-            <li>12th & Market</li>
-            <li>883309050 (an OPA number with no hyphens or other characters)</li>
-          </ul>
-        `;
-    },
-  },
-};
-</script>
-
-<style lang="scss" scoped>
-
-@import "../../node_modules/@phila/pinboard/src/assets/scss/customGreeting.scss";
-
-  .section {
-    padding: 1.5rem;
-  }
-
-  .app-list {
-    margin-bottom: 2rem;
-  }
-
-  // .open-list-button {
-  //   text-transform: uppercase;
-  //   background-color: #0f4d90;
-  //   color: #ffffff;
-  //   padding-left: 32px;
-  //   padding-right: 32px;
-  //   padding-top: 17px;
-  //   padding-bottom: 17px;
-  // }
-
-</style>
