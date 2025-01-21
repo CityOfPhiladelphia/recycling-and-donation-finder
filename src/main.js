@@ -36,12 +36,14 @@ const customComps = markRaw({
 });
 
 let $config = {
-  publicPath: import.meta.env.VITE_PUBLICPATH,
   i18n: {
-    enabled: false,
-    selectorHidden: true,
-    data: {},
+    data: {
+      messages: {
+        'en-US': {}
+      }
+    }
   },
+  publicPath: import.meta.env.VITE_PUBLICPATH,
   app: {
     title: 'Resources for recycling and donation',
     subtitle: 'Find out where to donate items or recycle in Philadelphia',
@@ -91,7 +93,6 @@ let $config = {
     //   },
     // },
   },
-  markerType: 'circle-marker',
   mapLayer: {
     id: 'resources',
     source: 'resources',
