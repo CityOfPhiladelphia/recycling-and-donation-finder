@@ -66,6 +66,7 @@ let $config = {
     labelText:  {
       all: 'Search by address or keyword',
     },
+    fuseThreshold: 0.1
   },
   locationInfo: {
     siteNameField: 'organization_name',
