@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
       fs: {
         allow: [
           searchForWorkspaceRoot(process.cwd()),
-          'C:/Users/andy.rothwell/Projects/vue3-pinboard/node_modules/@fortawesome/fontawesome-pro/webfonts',
+          './node_modules/@fortawesome/fontawesome-pro/webfonts',
         ]
       }
     },
@@ -46,11 +46,12 @@ export default defineConfig(({ mode }) => {
     base: env.VITE_PUBLICPATH,
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '@pinboard': env.VITE_LINKED ? fileURLToPath(new URL('./node_modules/@phila/pinboard/src/main.js', import.meta.url)) : '@phila/pinboard',
       }
     },
     optimizeDeps: {
-      include: [ '@turf/jsts', 'maplibre-gl', 'concaveman' ],
+      // include: [ '@turf/jsts', 'maplibre-gl', 'concaveman' ],
       // exclude: [ '@phila/pinboard' ]
       // extensions: [".scss", ".sass"],
     }
