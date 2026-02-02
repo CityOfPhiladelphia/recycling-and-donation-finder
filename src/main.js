@@ -27,24 +27,22 @@ import pinboard from '@pinboard';
 import recycling from './data-sources/recycling';
 
 import customGreeting from './components/customGreeting.vue';
+import expandCollapseContent from './components/ExpandCollapseContent.vue';
+
 const customComps = markRaw({
   'customGreeting': customGreeting,
+  'expandCollapseContent': expandCollapseContent,
 });
 
+import i18n from './i18n/i18n';
+
 let $config = {
-  i18n: {
-    data: {
-      messages: {
-        'en-US': {}
-      }
-    }
-  },
+  i18n: i18n.i18n,
   publicPath: import.meta.env.VITE_PUBLICPATH,
   app: {
-    title: 'Resources for recycling and donation',
-    subtitle: 'Find out where to donate items or recycle in Philadelphia',
     logoAlt: 'City of Philadelphia',
     type: 'recycling',
+    subtitle: 'i18n',
   },
   gtag: {
     category: 'rf-recycling',
@@ -59,14 +57,30 @@ let $config = {
       'address',
       'keyword',
     ],
-    labelText:  {
-      all: 'Search by address or keyword',
-    },
     fuseThreshold: 0.1
   },
   locationInfo: {
     siteNameField: 'organization_name',
     siteName: function(item) { return item.properties.organization_name },
+  },
+  tags: {
+    type: 'fieldValues',
+    tags: [
+      {
+        type: 'array',
+        field: 'tags',
+        translate: true,
+      },
+      {
+        type: 'array',
+        field: 'services_offered',
+        translate: true,
+      },
+      {
+        type: 'value',
+        field: 'organization_name',
+      },
+    ],
   },
   customComps,
   hiddenRefine: {
@@ -118,12 +132,12 @@ let $config = {
       attrs: {
         target: "_blank",
       },
-      text: "City of Philadelphia",
+      text: "app.cityOfPhiladelphia",
     },
     {
       type: "native",
       href: "/recycling-donation-finder/",
-      text: "About",
+      text: "app.about",
     },
     {
       type: "native",
@@ -131,7 +145,7 @@ let $config = {
       attrs: {
         target: "_blank",
       },
-      text: "Feedback",
+      text: "app.feedback",
     },
   ],
 };
