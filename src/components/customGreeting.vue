@@ -9,7 +9,7 @@ const props = defineProps({
     default: false,
   },
 });
-  
+
 </script>
 
 <template>
@@ -32,67 +32,38 @@ const props = defineProps({
 
     <div class="main-area">
       <h3 class="title is-3 is-spaced">
-        About this finder
+        {{ $t('introPage.aboutTitle') }}
       </h3>
-      <div class="mb-4">
-        Philadelphia households get weekly trash and
-        <a
-          target="_blank"
-          href="https://www.phila.gov/programs/recycling-program/what-to-recycle/"
-        >single-stream recycling</a>
-        collection. However, you may generate other materials that can be reused or recycled instead of going to a landfill.
-        Recycling helps our communities stay clean and green by diverting waste away from landfills and waste-to-energy facilities.
-      </div>
-      <div>This tool can help you recycle more and recycle right in Philadelphia. You can</div>
+      <div
+        class="mb-4"
+        v-html="$t('introPage.p1')"
+      />
+      <div>{{ $t('introPage.p2') }}</div>
       <div class="intro-list">
         <ul>
-          <li>Browse the list of drop-off locations where you can donate or recycle household items.</li>
-          <li>Search by address or keyword.</li>
-          <li>Filter your results by type of donation or material.</li>
+          <li>{{ $t('introPage.ul1.li1') }}</li>
+          <li>{{ $t('introPage.ul1.li2') }}</li>
+          <li>{{ $t('introPage.ul1.li3') }}</li>
         </ul>
       </div>
-      <div>
-        You can also find location and contact information for the City’s Sanitation Convenience Centers. You can go to a Sanitation Convenience Center to:
-      </div>
+      <div>{{ $t('introPage.p3') }}</div>
       <div class="intro-list">
         <ul>
-          <li>
-            <a
-              target="_blank"
-              href="https://www.phila.gov/services/trash-recycling-city-upkeep/find-a-sanitation-convenience-center-to-drop-off-trash-or-recycling"
-            >Drop off trash or recycling</a>.
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://www.phila.gov/services/trash-recycling-city-upkeep/get-a-recycling-bin/"
-            >Get a recycling bin</a>.
-          </li>
+          <li v-html="$t('introPage.ul2.li1')" />
+          <li v-html="$t('introPage.ul2.li2')" />
         </ul>
       </div>
-      <p>
-        If you have any questions, contact the Recycling Office:
-      </p>
+      <p>{{ $t('introPage.contactTitle') }}</p>
       <div class="intro-list">
         <ul>
-          <li>
-            By phone: <a
-              target="_blank"
-              href="tel:2156865444"
-            >(215) 686-5444</a>.
-          </li>
-          <li>
-            Be email: <a
-              target="_blank"
-              href="mailto:recyclingoffice@phila.gov"
-            >recyclingoffice@phila.gov</a>.
-          </li>
+          <li v-html="$t('introPage.contactPhone')" />
+          <li v-html="$t('introPage.contactEmail')" />
         </ul>
       </div>
       <h3 class="title is-3">
-        Accepting donations or recyclables?
+        {{ $t('introPage.addOrgTitle') }}
       </h3>
-      <p>To learn about adding your organization to the finder, contact <a href="mailto:RecyclingOffice@phila.gov">recyclingoffice@phila.gov</a>.</p>
+      <p v-html="$t('introPage.addOrgText')" />
     </div>
   </div>
 </template>
