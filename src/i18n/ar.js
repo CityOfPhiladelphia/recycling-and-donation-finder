@@ -43,7 +43,7 @@ export default{
   "Construction and demolition debris": "حطام البناء والهدم",
   "Food donations": "التبرعات الغذائية",
   "Hazardous waste": "نفايات خطرة",
-  "#6": "#6",
+  "#6": "{'#'}6",
   "accessories": "مستلزمات",
   "accessory": "كمالي",
   "acrylic": "الاكريليك",

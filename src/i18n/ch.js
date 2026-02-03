@@ -43,7 +43,7 @@ export default{
   "Construction and demolition debris": "施工和拆除废墟",
   "Food donations": "食物捐赠",
   "Hazardous waste": "危险废物",
-  "#6": "#6",
+  "#6": "{'#'}6",
   "accessories": "配件",
   "accessory": "配件",
   "acrylic": "丙烯酸纤维",

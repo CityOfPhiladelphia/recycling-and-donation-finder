@@ -43,7 +43,7 @@ export default{
   "Construction and demolition debris": "Débris de construction et de démolition",
   "Food donations": "Dons alimentaires",
   "Hazardous waste": "Déchets dangereux",
-  "#6": "#6",
+  "#6": "{'#'}6",
   "accessories": "accessoires",
   "accessory": "accessoire",
   "acrylic": "acrylique",

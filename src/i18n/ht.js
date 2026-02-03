@@ -43,7 +43,7 @@ export default{
   "Construction and demolition debris": "Konstriksyon ak demolisyon debri",
   "Food donations": "Donasyon manje",
   "Hazardous waste": "Dezè fatra",
-  "#6": "#6",
+  "#6": "{'#'}6",
   "accessories": "Pwodwi pou Telefòn",
   "accessory": "akseswar",
   "acrylic": "Acrylic",

@@ -43,7 +43,7 @@ export default{
   "Construction and demolition debris": "Các mảnh vụn xây dựng và phá dỡ",
   "Food donations": "Quyên góp thực phẩm",
   "Hazardous waste": "Chất thải nguy hại",
-  "#6": "#6",
+  "#6": "{'#'}6",
   "accessories": "phụ kiện",
   "accessory": "phụ kiện",
   "acrylic": "acrylic",

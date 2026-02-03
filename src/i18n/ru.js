@@ -43,7 +43,7 @@ export default{
   "Construction and demolition debris": "Строительный мусор и строительный мусор",
   "Food donations": "Пожертвования продуктов питания",
   "Hazardous waste": "Опасные отходы",
-  "#6": "#6",
+  "#6": "{'#'}6",
   "accessories": "аксессуары",
   "accessory": "аксессуар",
   "acrylic": "акрил",
