@@ -25,9 +25,9 @@ export default{
     },
     "contactTitle": "إذا كانت لديك أي أسئلة، فاتصل بمكتب إعادة التدوير:",
     "contactPhone": "عبر الهاتف: <a target=\"_blank\" href=\"tel:2156865444\">(215) 686-5444</a>.",
-    "contactEmail": "عبر البريد الإلكتروني: <a target=\"_blank\" href=\"mailto:recyclingoffice@phila.gov\">recyclingoffice@phila.gov</a>.",
+    "contactEmail": "عبر البريد الإلكتروني: <a target=\"_blank\" href=\"mailto:recyclingoffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>.",
     "addOrgTitle": "قبول التبرعات أو المواد القابلة لإعادة التدوير؟",
-    "addOrgText": "لمعرفة المزيد حول إضافة مؤسستك إلى أداة البحث، اتصل بـ <a href=\"mailto:RecyclingOffice@phila.gov\">recyclingoffice@phila.gov</a>."
+    "addOrgText": "لمعرفة المزيد حول إضافة مؤسستك إلى أداة البحث، اتصل بـ <a href=\"mailto:RecyclingOffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>."
   },
   "infoCircles": {
     "Single-stream recycling": "نحن نقبل العناصر التالية التي تم تنظيفها وتجفيفها على الرصيف: الزجاجات والحاويات البلاستيكية (#1 و 2 و 5)، والعلب المعدنية، والزجاج، والورق، والكرتون"

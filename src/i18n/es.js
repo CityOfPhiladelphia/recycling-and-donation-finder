@@ -25,9 +25,9 @@ export default{
     },
     "contactTitle": "Si tiene alguna pregunta, póngase en contacto con la Oficina de Reciclaje:",
     "contactPhone": "Por teléfono: <a target=\"_blank\" href=\"tel:2156865444\">(215) 686-5444</a>.",
-    "contactEmail": "Por correo electrónico: <a target=\"_blank\" href=\"mailto:recyclingoffice@phila.gov\">recyclingoffice@phila.gov</a>.",
+    "contactEmail": "Por correo electrónico: <a target=\"_blank\" href=\"mailto:recyclingoffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>.",
     "addOrgTitle": "¿Aceptas donaciones o materiales reciclables?",
-    "addOrgText": "Para obtener más información sobre cómo añadir tu organización al buscador, <a href=\"mailto:RecyclingOffice@phila.gov\">ponte en contacto con recyclingoffice@phila.gov</a>."
+    "addOrgText": "Para obtener más información sobre cómo añadir tu organización al buscador, <a href=\"mailto:RecyclingOffice{'@'}phila.gov\">ponte en contacto con recyclingoffice{'@'}phila.gov</a>."
   },
   "infoCircles": {
     "Single-stream recycling": "Aceptamos los siguientes artículos limpios y secos en la acera: botellas y recipientes de plástico (#1, 2 y 5), latas de metal, vidrio, papel, cartón, cajas de cartón"

@@ -25,9 +25,9 @@ export default{
     },
     "contactTitle": "如果您有任何疑问，请联系回收办公室：",
     "contactPhone": "通过电话：<a target=\"_blank\" href=\"tel:2156865444\">(215) 686-</a> 5444。",
-    "contactEmail": "通过电子邮件：<a target=\"_blank\" href=\"mailto:recyclingoffice@phila.gov\">recyclingoffice@phila.gov</a>。",
+    "contactEmail": "通过电子邮件：<a target=\"_blank\" href=\"mailto:recyclingoffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>。",
     "addOrgTitle": "接受捐款或可回收物品？",
-    "addOrgText": "要了解如何将您的组织添加到查找器中，请联系 <a href=\"mailto:RecyclingOffice@phila.gov\">recyclingoffice@phila.gov</a>。"
+    "addOrgText": "要了解如何将您的组织添加到查找器中，请联系 <a href=\"mailto:RecyclingOffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>。"
   },
   "infoCircles": {
     "Single-stream recycling": "我们接受以下在路边清洗和干燥的物品：塑料瓶和容器（#1、2 和 5）、金属罐、玻璃、纸、纸板、纸箱"

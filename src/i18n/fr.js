@@ -25,9 +25,9 @@ export default{
     },
     "contactTitle": "Si vous avez des questions, contactez le bureau de recyclage :",
     "contactPhone": "Par téléphone : <a target=\"_blank\" href=\"tel:2156865444\">(215) 686-5444</a>.",
-    "contactEmail": "Par e-mail : <a target=\"_blank\" href=\"mailto:recyclingoffice@phila.gov\">recyclingoffice@phila.gov</a>.",
+    "contactEmail": "Par e-mail : <a target=\"_blank\" href=\"mailto:recyclingoffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>.",
     "addOrgTitle": "Vous acceptez des dons ou des matières recyclables ?",
-    "addOrgText": "Pour en savoir plus sur l'ajout de votre organisation à l'outil de recherche, contactez <a href=\"mailto:RecyclingOffice@phila.gov\">recyclingoffice@phila.gov</a>."
+    "addOrgText": "Pour en savoir plus sur l'ajout de votre organisation à l'outil de recherche, contactez <a href=\"mailto:RecyclingOffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>."
   },
   "infoCircles": {
     "Single-stream recycling": "Nous acceptons les articles suivants nettoyés et secs en bordure de rue : bouteilles et contenants en plastique (#1, 2 et 5), canettes métalliques, verre, papier, carton, cartons"

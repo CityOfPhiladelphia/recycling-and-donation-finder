@@ -25,9 +25,9 @@ export default{
     },
     "contactTitle": "Nếu bạn có bất kỳ câu hỏi nào, hãy liên hệ với Văn phòng Tái chế:",
     "contactPhone": "Qua điện thoại: <a target=\"_blank\" href=\"tel:2156865444\">(215) 686-5444</a>.",
-    "contactEmail": "Qua email: <a target=\"_blank\" href=\"mailto:recyclingoffice@phila.gov\">recyclingoffice@phila.gov</a>.",
+    "contactEmail": "Qua email: <a target=\"_blank\" href=\"mailto:recyclingoffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>.",
     "addOrgTitle": "Chấp nhận quyên góp hoặc tái chế?",
-    "addOrgText": "Để tìm hiểu về cách thêm tổ chức của bạn vào công cụ tìm kiếm, hãy liên hệ <a href=\"mailto:RecyclingOffice@phila.gov\">recyclingoffice@phila.gov</a>."
+    "addOrgText": "Để tìm hiểu về cách thêm tổ chức của bạn vào công cụ tìm kiếm, hãy liên hệ <a href=\"mailto:RecyclingOffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>."
   },
   "infoCircles": {
     "Single-stream recycling": "Chúng tôi chấp nhận các mặt hàng sau đây được làm sạch và lau khô lề đường: chai nhựa và hộp đựng (#1, 2, & 5), lon kim loại, thủy tinh, giấy, bìa cứng, thùng carton"
