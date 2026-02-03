@@ -25,9 +25,9 @@ export default {
     },
     "contactTitle": "If you have any questions, contact the Recycling Office:",
     "contactPhone": "By phone: <a target=\"_blank\" href=\"tel:2156865444\">(215) 686-5444</a>.",
-    "contactEmail": "By email: <a target=\"_blank\" href=\"mailto:recyclingoffice@phila.gov\">recyclingoffice@phila.gov</a>.",
+    "contactEmail": "By email: <a target=\"_blank\" href=\"mailto:recyclingoffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>.",
     "addOrgTitle": "Accepting donations or recyclables?",
-    "addOrgText": "To learn about adding your organization to the finder, contact <a href=\"mailto:RecyclingOffice@phila.gov\">recyclingoffice@phila.gov</a>."
+    "addOrgText": "To learn about adding your organization to the finder, contact <a href=\"mailto:RecyclingOffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>."
   },
   "infoCircles": {
     "Single-stream recycling": "We accept the following items cleaned and dry curbside: plastic bottles and containers (#1, 2, & 5), metal cans, glass, paper, cardboard, cartons"
@@ -45,7 +45,7 @@ export default {
   "Construction and demolition debris": "Construction and demolition debris",
   "Food donations": "Food donations",
   "Hazardous waste": "Hazardous waste",
-  "#6": "{'#'}6",
+  "#6": "#6",
   "accessories": "accessories",
   "accessory": "accessory",
   "acrylic": "acrylic",

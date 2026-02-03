@@ -25,9 +25,9 @@ export default{
     },
     "contactTitle": "Si ou gen nenpòt kesyon, kontakte Biwo Resiklaj la:",
     "contactPhone": "Pa telefòn: <a target=\"_blank\" href=\"tel:2156865444\">(215) 686-5444</a>.",
-    "contactEmail": "Pa imèl: <a target=\"_blank\" href=\"mailto:recyclingoffice@phila.gov\">recyclingoffice@phila.gov</a>.",
+    "contactEmail": "Pa imèl: <a target=\"_blank\" href=\"mailto:recyclingoffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>.",
     "addOrgTitle": "Aksepte donasyon oswa resiklab?",
-    "addOrgText": "Pou aprann sou ajoute òganizasyon ou nan chèche a, kontakte <a href=\"mailto:RecyclingOffice@phila.gov\">recyclingoffice@phila.gov</a>."
+    "addOrgText": "Pou aprann sou ajoute òganizasyon ou nan chèche a, kontakte <a href=\"mailto:RecyclingOffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>."
   },
   "infoCircles": {
     "Single-stream recycling": "Nou aksepte atik sa yo netwaye ak sèk curbside: boutèy plastik ak resipyan (#1, 2, & 5), bwat metal, vè, papye, bwat katon, katon"
@@ -43,7 +43,7 @@ export default{
   "Construction and demolition debris": "Konstriksyon ak demolisyon debri",
   "Food donations": "Donasyon manje",
   "Hazardous waste": "Dezè fatra",
-  "#6": "{'#'}6",
+  "#6": "#6",
   "accessories": "Pwodwi pou Telefòn",
   "accessory": "akseswar",
   "acrylic": "Acrylic",

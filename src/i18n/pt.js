@@ -25,9 +25,9 @@ export default{
     },
     "contactTitle": "Se você tiver alguma dúvida, entre em contato com o Escritório de Reciclagem:",
     "contactPhone": "Por telefone: <a target=\"_blank\" href=\"tel:2156865444\">(215) 686-5444</a>.",
-    "contactEmail": "Por e-mail: <a target=\"_blank\" href=\"mailto:recyclingoffice@phila.gov\">recyclingoffice@phila.gov</a>.",
+    "contactEmail": "Por e-mail: <a target=\"_blank\" href=\"mailto:recyclingoffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>.",
     "addOrgTitle": "Aceitando doações ou materiais recicláveis?",
-    "addOrgText": "Para saber como adicionar sua organização ao localizador, entre em contato com <a href=\"mailto:RecyclingOffice@phila.gov\">recyclingoffice@phila.gov.</a>"
+    "addOrgText": "Para saber como adicionar sua organização ao localizador, entre em contato com <a href=\"mailto:RecyclingOffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov.</a>"
   },
   "infoCircles": {
     "Single-stream recycling": "Aceitamos os seguintes itens limpos e secos na calçada: garrafas e recipientes de plástico (#1, 2 e 5), latas de metal, vidro, papel, papelão, caixas de papelão"
@@ -43,7 +43,7 @@ export default{
   "Construction and demolition debris": "Detritos de construção e demolição",
   "Food donations": "Doações de alimentos",
   "Hazardous waste": "Resíduos perigosos",
-  "#6": "{'#'}6",
+  "#6": "#6",
   "accessories": "acessórios",
   "accessory": "acessório",
   "acrylic": "acrílico",

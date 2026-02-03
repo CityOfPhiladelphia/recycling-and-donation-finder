@@ -25,9 +25,9 @@ export default{
     },
     "contactTitle": "Если у вас есть какие-либо вопросы, обратитесь в отдел утилизации:",
     "contactPhone": "По телефону: <a target=\"_blank\" href=\"tel:2156865444\">(215) 686-5444</a>.",
-    "contactEmail": "По электронной почте: <a target=\"_blank\" href=\"mailto:recyclingoffice@phila.gov\">recyclingoffice@phila.gov</a>.",
+    "contactEmail": "По электронной почте: <a target=\"_blank\" href=\"mailto:recyclingoffice{'@'}phila.gov\">recyclingoffice{'@'}phila.gov</a>.",
     "addOrgTitle": "Принимаете пожертвования или перерабатываете материалы?",
-    "addOrgText": "Чтобы узнать, как добавить свою организацию в поисковик, свяжитесь с нами <a href=\"mailto:RecyclingOffice@phila.gov\">по адресу recyclingoffice@phila.gov</a>."
+    "addOrgText": "Чтобы узнать, как добавить свою организацию в поисковик, свяжитесь с нами <a href=\"mailto:RecyclingOffice{'@'}phila.gov\">по адресу recyclingoffice{'@'}phila.gov</a>."
   },
   "infoCircles": {
     "Single-stream recycling": "Мы принимаем следующие товары, очищенные и сухие на обочине: пластиковые бутылки и контейнеры (#1, 2 и 5), металлические банки, стекло, бумагу, картон, картонные коробки"
@@ -43,7 +43,7 @@ export default{
   "Construction and demolition debris": "Строительный мусор и строительный мусор",
   "Food donations": "Пожертвования продуктов питания",
   "Hazardous waste": "Опасные отходы",
-  "#6": "{'#'}6",
+  "#6": "#6",
   "accessories": "аксессуары",
   "accessory": "аксессуар",
   "acrylic": "акрил",
