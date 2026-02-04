@@ -3,6 +3,7 @@ export default{
   "app": {
     "title": "Tài nguyên để tái chế và quyên góp",
     "subtitle": "Tìm hiểu nơi quyên góp mặt hàng hoặc tái chế ở Philadelphia",
+    "noResults": "Chúng tôi rất tiếc, không có kết quả cho tìm kiếm đó. Điều chỉnh các bộ lọc bạn đã chọn và thử lại.",
     "cityOfPhiladelphia": "Thành phố Philadelphia",
     "about": "Về công cụ này",
     "feedback": "Phản hồi",
@@ -32,6 +33,8 @@ export default{
   "infoCircles": {
     "Single-stream recycling": "Chúng tôi chấp nhận các mặt hàng sau đây được làm sạch và lau khô lề đường: chai nhựa và hộp đựng (#1, 2, & 5), lon kim loại, thủy tinh, giấy, bìa cứng, thùng carton"
   },
+  "servicesOffered": "Dịch vụ được cung cấp",
+  "Tags": "Thẻ",
   "Single-stream recycling": "Tái chế một luồng",
   "Source-separated recycling": "Tái chế tách nguồn",
   "Electronic/universal waste": "Chất thải điện tử/phổ quát",

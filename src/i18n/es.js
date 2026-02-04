@@ -3,6 +3,7 @@ export default{
   "app": {
     "title": "Recursos para el reciclaje y la donación",
     "subtitle": "Descubra dónde donar artículos o reciclar en Filadelfia",
+    "noResults": "Lo sentimos, no hay resultados para esa búsqueda. Ajusta los filtros que has seleccionado e inténtalo de nuevo.",
     "cityOfPhiladelphia": "Ciudad de Filadelfia",
     "about": "Acerca de este buscador",
     "feedback": "Comentarios",
@@ -32,6 +33,8 @@ export default{
   "infoCircles": {
     "Single-stream recycling": "Aceptamos los siguientes artículos limpios y secos en la acera: botellas y recipientes de plástico (#1, 2 y 5), latas de metal, vidrio, papel, cartón, cajas de cartón"
   },
+  "servicesOffered": "Servicios ofrecidos",
+  "Tags": "Etiquetas",
   "Single-stream recycling": "Reciclaje de flujo único",
   "Source-separated recycling": "Reciclaje separado en origen",
   "Electronic/universal waste": "Residuos electrónicos/universales",

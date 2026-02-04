@@ -3,6 +3,7 @@ export default{
   "app": {
     "title": "回收和捐赠资源",
     "subtitle": "了解在费城捐赠物品或回收的地方",
+    "noResults": "很抱歉，该搜索没有结果。调整您选择的过滤器，然后重试。",
     "cityOfPhiladelphia": "费城市",
     "about": "关于本查找器",
     "feedback": "反馈",
@@ -32,6 +33,8 @@ export default{
   "infoCircles": {
     "Single-stream recycling": "我们接受以下在路边清洗和干燥的物品：塑料瓶和容器（#1、2 和 5）、金属罐、玻璃、纸、纸板、纸箱"
   },
+  "servicesOffered": "提供的服务",
+  "Tags": "标签",
   "Single-stream recycling": "单流回收",
   "Source-separated recycling": "源头分离回收",
   "Electronic/universal waste": "电子/通用废物",
