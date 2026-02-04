@@ -3,6 +3,7 @@ export default{
   "app": {
     "title": "Resous pou resiklaj ak don",
     "subtitle": "Chèche konnen ki kote pou bay atik oswa resikle nan Philadelphia",
+    "noResults": "Nou regrèt, pa gen okenn rezilta pou rechèch sa. Ajiste filtè yo ou te chwazi epi eseye ankò.",
     "cityOfPhiladelphia": "Vil Philadelphia",
     "about": "Konsènan rechèch sa a",
     "feedback": "Feedback",
@@ -32,6 +33,8 @@ export default{
   "infoCircles": {
     "Single-stream recycling": "Nou aksepte atik sa yo netwaye ak sèk curbside: boutèy plastik ak resipyan (#1, 2, & 5), bwat metal, vè, papye, bwat katon, katon"
   },
+  "servicesOffered": "Sèvis yo ofri",
+  "Tags": "Tags",
   "Single-stream recycling": "Resiklaj sèl-kouran",
   "Source-separated recycling": "Resiklaj ki separe sous",
   "Electronic/universal waste": "Fatra elektwonik/inivèsèl",

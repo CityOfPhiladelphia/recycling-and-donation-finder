@@ -3,6 +3,7 @@ export default{
   "app": {
     "title": "Ressources pour le recyclage et les dons",
     "subtitle": "Découvrez où donner des articles ou recycler à Philadelphie",
+    "noResults": "Nous sommes désolés, il n'y a aucun résultat pour cette recherche. Ajustez les filtres que vous avez sélectionnés et réessayez.",
     "cityOfPhiladelphia": "Ville de Philadelphie",
     "about": "A propos de cet outil de recherche",
     "feedback": "Commentaires",
@@ -32,6 +33,8 @@ export default{
   "infoCircles": {
     "Single-stream recycling": "Nous acceptons les articles suivants nettoyés et secs en bordure de rue : bouteilles et contenants en plastique (#1, 2 et 5), canettes métalliques, verre, papier, carton, cartons"
   },
+  "servicesOffered": "Services offerts",
+  "Tags": "Balises",
   "Single-stream recycling": "Recyclage à flux unique",
   "Source-separated recycling": "Recyclage séparé à la source",
   "Electronic/universal waste": "Déchets électroniques/universels",

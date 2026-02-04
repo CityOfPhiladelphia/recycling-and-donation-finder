@@ -3,6 +3,7 @@ export default{
   "app": {
     "title": "Recursos para reciclagem e doação",
     "subtitle": "Descubra onde doar itens ou reciclar na Filadélfia",
+    "noResults": "Desculpe, não há resultados para essa pesquisa. Ajuste os filtros que você selecionou e tente novamente.",
     "cityOfPhiladelphia": "Cidade da Filadélfia",
     "about": "Sobre este localizador",
     "feedback": "Feedback",
@@ -32,6 +33,8 @@ export default{
   "infoCircles": {
     "Single-stream recycling": "Aceitamos os seguintes itens limpos e secos na calçada: garrafas e recipientes de plástico (#1, 2 e 5), latas de metal, vidro, papel, papelão, caixas de papelão"
   },
+  "servicesOffered": "Serviços oferecidos",
+  "Tags": "Etiquetas",
   "Single-stream recycling": "Reciclagem de fluxo único",
   "Source-separated recycling": "Reciclagem separada por fonte",
   "Electronic/universal waste": "Resíduos eletrônicos/universais",

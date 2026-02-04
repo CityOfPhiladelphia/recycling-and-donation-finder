@@ -1,8 +1,9 @@
-export default {
+export default{
   "language": "English",
   "app": {
     "title": "Resources for recycling and donation",
     "subtitle": "Find out where to donate items or recycle in Philadelphia",
+    "noResults": "We're sorry, there are no results for that search. Adjust the filters you've selected and try again.",
     "cityOfPhiladelphia": "City of Philadelphia",
     "about": "About this finder",
     "feedback": "Feedback",
